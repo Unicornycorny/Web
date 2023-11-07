@@ -11,7 +11,8 @@ h1 {
     height: 100px;
     border: 5px;
 }
-.navmen a:link{
+
+.navmen a:link {
     Color: black;
 }
 
@@ -25,6 +26,7 @@ h1 {
 
 .navmen nav li {
     display: inline;
+    position: relative;
     margin-right: 30px;
 }
 
@@ -33,13 +35,29 @@ h1 {
     color: #333;
 }
 
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.navmen li:hover .submenu {
+    display: block;
+}
+
+
 main {
     display: flex;
     height: 100vw;
     flex-direction: column;
     align-items: center;
 }
-main a:link{
+
+main a:link {
     color: black;
 }
 
@@ -63,9 +81,22 @@ main a:link{
 
 }
 
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
 footer img {
     height: 320px;
     width: 285px;
+}
+
+.image2 {
+    display: flex;
+    justify-content: end;
+    width: 226;
+    height: 320;
 }
 
 .page_bar {
