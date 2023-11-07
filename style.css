@@ -108,3 +108,8 @@ footer img {
     display: flex;
     justify-content: end;
 }
+@media screen {
+    .image2 {
+        display: none;
+    }
+}
