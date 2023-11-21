@@ -22,7 +22,7 @@ h1 {
     text-align: center;
     border: 1px solid black;
     box-shadow: 0px 4px 4px black;
-
+    height: 25px;
 }
 
 .navlist li {
@@ -120,16 +120,27 @@ footer img {
         }
 } 
 
-.submenu {
+.nav-container {
+    position: absolute;
+    display: inline-block;
+}
+
+.nav-menu {
     display: none;
     position: absolute;
-    top: 0;
-    left: 100%;
-    background-color: #472d2d;
-    border: 1px solid #ccc;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 10px;
-  }
-  
-nav li:hover .submenu {
-   display: block;
+    z-index: 1;
+}
+
+.nav-container:hover .nav-menu {
+    display: block;
+}
+
+.nav-item {
+    margin: 5px 0;
+    cursor: pointer;
 }
