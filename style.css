@@ -16,39 +16,29 @@ h1 {
     Color: black;
 }
 
-.navmen nav ul {
-    list-style: none;
+.navlist {
+    list-style-type: none;
     padding: 0;
     text-align: center;
     border: 1px solid black;
     box-shadow: 0px 4px 4px black;
+
 }
 
-.navmen nav li {
+.navlist li {
     display: inline;
-    position: relative;
     margin-right: 30px;
 }
 
-.navmen nav a {
+.navmen a {
     text-decoration: none;
     color: #333;
 }
 
-.submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 10px;
+.navlist a:hover {
+    background-color: aqua;
+    border-radius: 20%;
 }
-
-.navmen li:hover .submenu {
-    display: block;
-}
-
 
 main {
     display: flex;
@@ -61,9 +51,11 @@ main a:link {
     color: black;
 }
 
-.main_page_list {
+ul.main_page_list {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
 }
 
 .main_page_list li {
@@ -75,28 +67,34 @@ main a:link {
     border-bottom-right-radius: 5px;
     box-shadow: 1px 1px 1px black;
     margin-top: 15px;
-    justify-content: center;
     background-color: aliceblue;
     max-width: 595px;
+    height: fit-content;
+    justify-content: space-around;
 
 }
 
 .links {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: end;
 }
 
 footer img {
-    height: 320px;
-    width: 285px;
+    max-height: 320px;
+    max-width: 285px;
+    min-width: 113px;
+    min-height: 160px;
 }
 
 .image2 {
     display: flex;
     justify-content: end;
-    width: 226;
-    height: 320;
+    max-width: 226px;
+    max-height: 320px;
+    min-width: 113px;
+    min-height: 160px;
 }
 
 .page_bar {
@@ -107,4 +105,31 @@ footer img {
 .footer_aside {
     display: flex;
     justify-content: end;
+    max-width: 226px;
+    max-height: 320px;
+    min-width: 113px;
+    min-height: 160px;
+}
+
+@media screen and (max-width: 870px) {
+        .image2{
+            display: none;
+        }
+        .footer_aside{
+            display: none;
+        }
+} 
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #472d2d;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+nav li:hover .submenu {
+   display: block;
 }
