@@ -137,6 +137,18 @@ footer img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 10px;
     z-index: 1;
+<<<<<<< HEAD
+=======
+}
+
+.nav-container:hover .nav-menu {
+    display: block;
+}
+
+.nav-item {
+    margin: 5px 0;
+    cursor: pointer;
+>>>>>>> e5215b493a834283f6db54fc392fd21abcc9d1da
 }
 
 .nav-container:hover .nav-menu {
