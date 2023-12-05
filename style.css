@@ -1,6 +1,6 @@
 html {
     margin: 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -150,14 +150,6 @@ footer img {
     cursor: pointer;
 }
 
-/*.image3 {
-    min-height: 5px;
-    min-width: 5px;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    <img src="forge.jpg"  class="image3"></img>
-}*/
 .side_main_list {
     display: flex;
     flex-direction: column;
@@ -166,6 +158,8 @@ footer img {
 }
 
 .side_main_list li {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
     background: #fff;
     border-radius: 5px;
     box-shadow: 2px 2px 10px #cacaca;
@@ -179,22 +173,25 @@ footer img {
 
 .table {
     display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 0.2fr));
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
-.table th,
-td {
+.table th {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+    background-color: #f2f2f2;
+}
+
+.table td {
+    display: table-cell;
     padding: 12px;
     text-align: left;
     border: 1px solid #ddd;
 }
-
-.table th {
-    background-color: #f2f2f2;
-}
-
 
 .table tr:nth-child(even) {
     background-color: #f9f9f9;
@@ -204,10 +201,18 @@ td {
     background-color: #fff;
 }
 
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+thead, tbody, tr{
+    display: contents;
+}
+
 @media (max-width: 600px) {
 
-    .table 
-    thead,
+    .table thead,
     tbody,
     th,
     td,
@@ -215,22 +220,18 @@ td {
         display: block;
     }
 
-    .table th,
-    td {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
     .tabel th {
         position: absolute;
-        top: -9999px;
-        left: -9999px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .table td {
         border: none;
         position: relative;
         padding-left: 50%;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .table td:before {
