@@ -162,7 +162,6 @@ footer img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: fit-content;
 }
 .side_main_list ul {
     display: flex;
@@ -170,10 +169,12 @@ footer img {
     justify-content: space-around;
     margin: 25px 0px;
     padding: 0%;
-    width: fit-content;
 }
 .side_main_list li {
     margin: 10px 0;
+    min-width: 200px;
+    min-height: 75px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .side_main_list li:nth-child(even) {
@@ -230,7 +231,7 @@ footer img {
 }
 
 .table tr:nth-child(odd) td {
-    background-color: #d8afaf;
+    background-color: #a0dfe0;
 }
 
 .table th, .table td {
