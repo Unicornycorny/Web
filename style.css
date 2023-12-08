@@ -1,6 +1,14 @@
 html {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
+    line-height: normal;
+    font-weight: normal;
+    background-color: white;
+    text-indent: 0%;
+    word-spacing: normal;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: none;
 }
 
 h1 {
@@ -9,7 +17,6 @@ h1 {
 }
 
 .navmen {
-    height: 100px;
     border: 5px;
     font-size: 25px;
 }
@@ -24,7 +31,7 @@ h1 {
     text-align: center;
     border: 1px solid black;
     box-shadow: 0px 4px 4px black;
-    height: 25px;
+    height: 30px;
 }
 
 .navlist li {
@@ -153,18 +160,40 @@ footer img {
 .side_main_list {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
+    width: fit-content;
+}
+.side_main_list ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 25px 0px;
+    padding: 0%;
+    width: fit-content;
 }
 
-.side_main_list li {
-    font-family: 'Times New Roman', Times, serif;
+.side_main_list li:nth-child(even) {
     font-size: large;
-    background: #fff;
+    background: #a0dfe0;
     border-radius: 5px;
     box-shadow: 2px 2px 10px #cacaca;
     color: #000;
     display: flex;
+    justify-content: center;
+    max-width: 595px;
+    padding: 8px;
+    position: relative;
+    width: 100%;
+}
+.side_main_list li:nth-child(odd) {
+    font-size: large;
+    background: rgb(216, 234, 251);
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #cacaca;
+    color: #000;
+    display: flex;
+    justify-content: center;
     max-width: 595px;
     padding: 8px;
     position: relative;
