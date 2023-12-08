@@ -172,6 +172,9 @@ footer img {
     padding: 0%;
     width: fit-content;
 }
+.side_main_list li {
+    margin: 10px 0;
+}
 
 .side_main_list li:nth-child(even) {
     font-size: large;
