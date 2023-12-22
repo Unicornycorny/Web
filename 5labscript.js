@@ -56,19 +56,27 @@ function deleteTask(button) {
 function loadTasksFromLocalStorage(taskList, taskTemplate) {
     const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-    tasks.forEach(taskText => {
+    tasks.forEach(task => {
         const taskItem = document.importNode(taskTemplate.content, true);
 
         const spanElement = taskItem.querySelector('span');
-        spanElement.textContent = taskText;
+        spanElement.textContent = task.text;
+
+        if (task.completed) {
+            spanElement.classList.add('completed');
+            const checkbox = taskItem.querySelector('.task-checkbox');
+            checkbox.checked = true;
+        }
 
         taskList.appendChild(taskItem);
     });
 }
 
-function saveTasksToLocalStorage(taskList) {
-    const tasks = Array.from(taskList.getElementsByClassName('task')).map(task => {
-        return task.querySelector('span').innerText;
+function saveTasksToLocalStorage() {
+    const tasks = Array.from(document.getElementsByClassName('task')).map(task => {
+        const spanElement = task.querySelector('span');
+        const isCompleted = spanElement.classList.contains('completed');
+        return { text: spanElement.innerText, completed: isCompleted };
     });
 
     localStorage.setItem('tasks', JSON.stringify(tasks));
