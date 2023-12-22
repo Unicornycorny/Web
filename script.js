@@ -5,16 +5,12 @@
     }
     function displayStats() {
       const loadTime = getLoadTime();
-
+    
       const statsContainer = document.createElement('div');
-      statsContainer.style.position = 'fixed';
-      statsContainer.style.bottom = '0';
-      statsContainer.style.left = '0';
-      statsContainer.style.backgroundColor = '#f0f0f0';
-      statsContainer.style.padding = '10px';
-      statsContainer.style.fontFamily = 'Arial, sans-serif';
+      statsContainer.classList.add('stats-container');
+    
       statsContainer.innerHTML = `Страница загружена за: ${loadTime} мс`;
-
+    
       document.body.appendChild(statsContainer);
     }
   
