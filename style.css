@@ -163,6 +163,7 @@ footer img {
     justify-content: center;
     align-items: center;
 }
+
 .side_main_list ul {
     display: flex;
     flex-direction: column;
@@ -170,6 +171,7 @@ footer img {
     margin: 25px 0px;
     padding: 0%;
 }
+
 .side_main_list li {
     margin: 10px 0;
     min-width: 200px;
@@ -187,9 +189,9 @@ footer img {
     justify-content: center;
     max-width: 595px;
     padding: 8px;
-    position: relative;
     width: 100%;
 }
+
 .side_main_list li:nth-child(odd) {
     font-size: large;
     background: rgb(216, 234, 251);
@@ -200,16 +202,21 @@ footer img {
     justify-content: center;
     max-width: 595px;
     padding: 8px;
-    position: relative;
     width: 100%;
 }
 
 .table {
     display: grid;
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    width: 100%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    text-align: center;
+    border: 3px solid #000000;
 }
 
 .table th {
@@ -217,6 +224,7 @@ footer img {
     text-align: left;
     border: 1px solid #ddd;
     background-color: #f2f2f2;
+    width: 100%;
 }
 
 .table td {
@@ -234,49 +242,41 @@ footer img {
     background-color: #a0dfe0;
 }
 
-.table th, .table td {
+.table th,
+.table td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
+    font-size: 1rem;
 }
-thead, tbody, tr{
+
+thead,
+tbody,
+tr {
     display: contents;
 }
 
 @media (max-width: 600px) {
 
-    .table thead,
-    tbody,
-    th,
-    td,
-    tr {
-        display: grid;
+    .table th,
+    .table td {
+        font-size: 0.7rem;
     }
-
-    .tabel th {
-        position: absolute;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
     .table td {
         border: none;
-        position: relative;
-        padding-left: 50%;
         width: 100%;
-        box-sizing: border-box;
-    }
-
-    .table td:before {
-        position: absolute;
-        top: 6px;
-        left: 6px;
-        width: 45%;
-        padding-right: 10px;
-        white-space: nowrap;
         box-sizing: border-box;
     }
 }
+@media (max-width: 300px) {
+
+    .table th,
+    .table td {
+        font-size: 0.3rem;
+    }
+}
+
+
 .todo-container {
     text-align: center;
 }
@@ -307,7 +307,8 @@ label {
     margin-bottom: 5px;
 }
 
-select, input {
+select,
+input {
     margin-bottom: 10px;
 }
 
