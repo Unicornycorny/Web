@@ -170,15 +170,24 @@
         </tbody>
     </table>
     <div class="todo-container">
-        <input type="text" id="taskInput" placeholder="Добавить новую задачу">
-        <button onclick="addTask()">Добавить</button>
-
-        <div id="taskList" class="task-list">
-        </div>
+        <form id="taskForm">
+            <input type="text" id="taskInput" placeholder="Добавить новую задачу">
+            <button type="submit">Добавить</button>
+        </form>
+        <div id="taskList" class="task-list"></div>
         <a href="handbook.html">Form for lab 5 example</a>
         <div id="preloader">Загрузка...</div>
         <div id="content"></div>
+    
+        <template id="taskTemplate">
+            <div class="task">
+                <input type="checkbox" class="task-checkbox">
+                <span></span>
+                <button class="delete-button">Удалить</button>
+            </div>
+        </template>
     </div>
+    
         <template id="commentTemplate">
             <li class="tempList">
                 <span class="comment-name"></span>
