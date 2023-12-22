@@ -225,7 +225,6 @@ footer img {
 
 .table td {
     display: table-cell;
-    text-align: left;
 }
 
 .table tr:nth-child(even) td {
@@ -254,6 +253,7 @@ tr {
     .table td {
         font-size: 0.7rem;
     }
+
     .table td {
         border: none;
         width: 100%;
@@ -274,11 +274,12 @@ tr {
     .main_page_list li {
         font-size: 18px;
     }
-    
+
     .navlist li {
         font-size: 1.3rem;
     }
 }
+
 @media (max-width: 450px) {
 
     .table th,
@@ -406,5 +407,4 @@ input {
     background-color: #f0f0f0;
     padding: 10px;
     font-family: Arial, sans-serif;
-  }
-  
+}

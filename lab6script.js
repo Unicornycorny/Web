@@ -26,13 +26,21 @@ function fetchData() {
     const randomFilter = Math.random() < 0.5 ? 100 : 200;
     const url = `https://jsonplaceholder.typicode.com/comments?postId=${randomFilter}`;
 
-    return fetch(url)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            return response.json();
-        });
+        return new Promise((resolve, reject) => {
+            fetch(url)
+              .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+              })
+              .then((data) => {
+                resolve(data);
+              })
+              .catch((error) => {
+                reject(error);
+              });
+          });
 }
 
 function renderData(data, contentContainer) {
